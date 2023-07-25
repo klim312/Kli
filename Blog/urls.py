@@ -17,14 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from posts.views import redirect_to_github_view, redirect_to_youtube_view, hellow_view, data_view, goodbye_view
+from posts.views import main_view, products_view
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    path('hello/', hellow_view),
-    path('data/', data_view),
-    path('github/', redirect_to_github_view),
-    path('goodbye/', goodbye_view),
-    path('youtube/', redirect_to_youtube_view)
+    path('', main_view),
+    path('products/', products_view),
 ]
-
