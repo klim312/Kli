@@ -11,6 +11,6 @@ def products_view(request):
     if request.method == 'GET':
         posts = Product.objects.all()
         context_data = {
-            'list_of_posts': posts
+            'products': posts
         }
         return render(request, 'products/products.html', context=context_data)
